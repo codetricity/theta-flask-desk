@@ -14,5 +14,5 @@
 windows
 
 ```text
->pyinstaller --add-data "templates;templates" --icon=assets/logo.ico app.py
+>pyinstaller -F --add-data "templates;templates" --icon=assets/logo.ico app.py
 ```
