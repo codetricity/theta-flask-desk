@@ -16,10 +16,10 @@ def start_flask(**server_kwargs):
     server_kwargs.pop("debug", None)
 
     try:
-        import waitress
-
-        waitress.serve(app, **server_kwargs)
+        print('serving on waitress')
+        serve(app, **server_kwargs)
     except:
+        print('running on waitress failed')
         app.run(**server_kwargs)
 
 
@@ -30,16 +30,20 @@ if __name__ == "__main__":
         # print('starting on http://localhost:5000')
         # serve(app, host='0.0.0.0', port=5000)
     else:
-        # ui = FlaskUI(app=app, server="flask", width=800, height=600)
-        # ui.run()
-        # serve(ui, host='0.0.0.0', port=13195)
-        FlaskUI(
-            server=start_flask,
-            server_kwargs={
-                "app": app,
-                "port": 3000,
-                "threaded": True,
-            },
-            width=800,
-            height=600,
-        ).run()
+        ui = FlaskUI(app=app, server="flask", width=800, height=600).run()
+        # try:
+        #     print('attempting to run with waitress')
+        #     FlaskUI(server=serve(app, port=3000))
+        # except:
+        #     print('waitress failed. using dev server')
+        #     FlaskUI(app=app, server="flask", width=800, height=600).run()
+        # FlaskUI(
+        #     server=start_flask,
+        #     server_kwargs={
+        #         "app": app,
+        #         "port": 3000,
+        #         "threaded": True,
+        #     },
+        #     width=800,
+        #     height=600,
+        # ).run()

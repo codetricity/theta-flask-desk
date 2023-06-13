@@ -13,11 +13,16 @@ def create_response(protocol, name):
 
 @app.route('/info')
 def info():
-    response = requests.get(base_url + 'info')
-    return render_template('response.html', response = response.text)
-
+    try:
+        response = requests.get(base_url + 'info')
+        return render_template('response.html', response = response.text)
+    except:
+        return render_template('response.html', response = 'error.  please true again')
 
 @app.route('/state')
 def state():
-    response = requests.post(base_url + 'state')
-    return render_template('response.html', response = response.text)
+    try: 
+        response = requests.post(base_url + 'state')
+        return render_template('response.html', response = response.text)
+    except:
+        return render_template('response.html', response = 'error.  please true again')    
