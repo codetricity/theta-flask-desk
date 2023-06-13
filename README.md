@@ -24,3 +24,8 @@ pyinstaller -w -F  --add-data "templates:templates" --add-data "static:static" a
 ```
 
 * no icon support
+
+## application responsiveness
+
+* Using [waitress](https://pypi.org/project/waitress/)
+* example [FlaskUI setuo](https://github.com/ClimenteA/flaskwebgui/blob/master/examples/flask-desktop/main.py)

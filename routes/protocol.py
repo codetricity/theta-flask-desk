@@ -14,10 +14,10 @@ def create_response(protocol, name):
 @app.route('/info')
 def info():
     response = requests.get(base_url + 'info')
-    return render_template('response.html', response = response.json())
+    return render_template('response.html', response = response.text)
 
 
 @app.route('/state')
 def state():
     response = requests.post(base_url + 'state')
-    return render_template('response.html', response = response.json())
+    return render_template('response.html', response = response.text)

@@ -8,6 +8,7 @@ flask = "*"
 requests = "*"
 flaskwebgui = "*"
 pyinstaller = "*"
+waitress = "*"
 
 [dev-packages]
 
