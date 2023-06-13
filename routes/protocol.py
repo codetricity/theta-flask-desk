@@ -15,7 +15,7 @@ def create_response(protocol, name):
 def info():
     try:
         response = requests.get(base_url + 'info')
-        return render_template('response.html', response = response.text)
+        return render_template('response.html', response = response.text, title='camera info')
     except:
         return render_template('response.html', response = 'error.  please true again')
 
@@ -23,6 +23,6 @@ def info():
 def state():
     try: 
         response = requests.post(base_url + 'state')
-        return render_template('response.html', response = response.text)
+        return render_template('response.html', response = response.text, title='camera state')
     except:
         return render_template('response.html', response = 'error.  please true again')    

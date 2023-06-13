@@ -3,7 +3,7 @@
 <div class="row">
   {% for entry in entries %}
   <div class="card" style="width: 15rem">
-    <a href="{{url_for('full_image')}}?image_url={{entry['fileUrl']}}">
+    <a href="{{url_for('full_image')}}?image_url={{entry['fileUrl']}}&name={{entry['name']}}">
         <img class="card-img-top" src="{{ entry['fileUrl']}}?type=thumb" />
     </a>
     <div class="card-body">

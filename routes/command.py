@@ -13,7 +13,7 @@ def take_picture():
     payload = {"name": "camera.takePicture"}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('response.html', response = response.text)
+    return render_template('response.html', response = response.text, title='taking picture')
 
 @app.route('/last_image')
 def last_image():
@@ -32,14 +32,16 @@ def last_image():
                         json=payload)
 
     data = resp.json()
-    last_file_url = data["results"]["entries"][0]["fileUrl"]    
-    return render_template('image.html', image_url = last_file_url)
+    last_file_url = data["results"]["entries"][0]["fileUrl"]
+    name = data["results"]["entries"][0]["name"]    
+    return render_template('image.html', image_url = last_file_url, title= name + ' most recent image on camera')
 
 @app.route('/full_image')
 def full_image():
     image_url = request.args.get('image_url')
-    print(image_url)
-    return render_template('image.html', image_url = image_url)
+    name = request.args.get('name')
+    print(image_url, name)
+    return render_template('image.html', image_url = image_url, title=name + ' image in camera')
 
 @app.route('/ten_images')
 def ten_images():
