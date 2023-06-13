@@ -14,7 +14,7 @@
 windows
 
 ```text
->pyinstaller -F --add-data "templates;templates" --icon=assets/logo.ico app.py
+>pyinstaller -F --add-data "templates;templates" --add-data "static:static"  --icon=assets/logo.ico app.py
 ```
 
 ### linux
