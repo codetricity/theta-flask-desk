@@ -16,3 +16,11 @@ windows
 ```text
 >pyinstaller -F --add-data "templates;templates" --icon=assets/logo.ico app.py
 ```
+
+### linux
+
+```text
+pyinstaller -w -F  --add-data "templates:templates" --add-data "static:static" app.py
+```
+
+* no icon support

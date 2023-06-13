@@ -1,7 +1,7 @@
 from flask import Flask
 from flaskwebgui import FlaskUI
 
-dev_mode = True
+dev_mode = False
 app = Flask("__main__")
 base_url = "https://fake-theta-alpha.vercel.app/osc/"
 # base_url = "http://192.168.1.1/osc/"
