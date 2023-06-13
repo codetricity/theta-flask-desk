@@ -1,0 +1,14 @@
+{% extends 'image_base.html' %}
+
+{% block main %}
+    <!-- <img class="img-fluid" src="{{last_file_url}}" alt="last image taken"> -->
+
+    <div id="panorama"></div>
+    <script>
+    pannellum.viewer('panorama', {
+        "type": "equirectangular",
+        "panorama": "{{last_file_url}}",
+        "preview": "{{last_file_url}}"
+    });
+    </script>
+{% endblock %}

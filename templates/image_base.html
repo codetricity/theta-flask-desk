@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{title}}</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}" 
+    rel="stylesheet"
+    />
+
+    <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='pannellum.css')}}"
+  />    
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename='pannellum.js')}}"
+    ></script>
+    <style>
+      #panorama {
+        width: 600px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="p-2">
+        <a href='/'> home</a>
+        
+      <div class="row d-flex justify-content-center pt-3">
+        {% block main %} {% endblock main %}
+        <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}">
+
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

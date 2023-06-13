@@ -2,9 +2,13 @@
 
 {% block main %}
 <h1>{{ heading }}</h1>
+<div class="col">
 <button type="button" class="btn btn-primary" onclick="window.location.href='/info';">info</button>
 <button type="button" class="btn btn-primary" onclick="window.location.href='/state';">state</button>
 <button type="button" class="btn btn-primary" onclick="window.location.href='/take_picture';">shutter</button>
-
+</div>
+<div class="col pt-3" >
+<button type="button" class="btn btn-primary" onclick="window.location.href='/last_image';">last image</button>
+</div>
 
 {% endblock main %}

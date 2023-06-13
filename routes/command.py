@@ -17,6 +17,20 @@ def take_picture():
 
 @app.route('/last_image')
 def last_image():
-    state_data = state()
-    print(type(state_data))
-    return state_data
+    url = f"{base_url}commands/execute"
+    command_string = "camera.listFiles"
+    payload = {
+                "name": command_string,
+                "parameters": {
+                    "fileType": "image",
+                    "entryCount": 1,
+                    "maxThumbSize": 0
+
+                }}
+    resp = requests.post(
+                        url,
+                        json=payload)
+
+    data = resp.json()
+    last_file_url = data["results"]["entries"][0]["fileUrl"]    
+    return render_template('image.html', last_file_url = last_file_url)
