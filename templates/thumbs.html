@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block main %}
+<a href="/">home</a>
+<div class="row">
+  {% for entry in entries %}
+  <div class="card" style="width: 15rem">
+    <a href="{{url_for('full_image')}}?image_url={{entry['fileUrl']}}">
+        <img class="card-img-top" src="{{ entry['fileUrl']}}?type=thumb" />
+    </a>
+    <div class="card-body">
+      <h4 class="" card-title>{{ entry['name'] }}</h4>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<a href='/'> home</a>
+
+{% endblock main %}

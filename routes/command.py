@@ -1,6 +1,6 @@
 from app import app, base_url
 import requests, json
-from flask import render_template
+from flask import render_template, request
 from .protocol import state
 
 def create_response(payload):
@@ -33,4 +33,50 @@ def last_image():
 
     data = resp.json()
     last_file_url = data["results"]["entries"][0]["fileUrl"]    
-    return render_template('image.html', last_file_url = last_file_url)
+    return render_template('image.html', image_url = last_file_url)
+
+@app.route('/full_image')
+def full_image():
+    image_url = request.args.get('image_url')
+    print(image_url)
+    return render_template('image.html', image_url = image_url)
+
+@app.route('/ten_images')
+def ten_images():
+    url = f"{base_url}commands/execute"
+    command_string = "camera.listFiles"
+    payload = {
+                "name": command_string,
+                "parameters": {
+                    "fileType": "image",
+                    "entryCount": 10,
+                    "maxThumbSize": 0
+
+                }}
+    resp = requests.post(
+                        url,
+                        json=payload)
+
+    data = resp.json()
+    entries = data["results"]["entries"]    
+    return render_template('thumbs.html', entries = entries, title="Files on camera")
+
+@app.route('/thirty_images')
+def thirty_images():
+    url = f"{base_url}commands/execute"
+    command_string = "camera.listFiles"
+    payload = {
+                "name": command_string,
+                "parameters": {
+                    "fileType": "image",
+                    "entryCount": 30,
+                    "maxThumbSize": 0
+
+                }}
+    resp = requests.post(
+                        url,
+                        json=payload)
+
+    data = resp.json()
+    entries = data["results"]["entries"]    
+    return render_template('thumbs.html', entries = entries, title="Files on camera")
