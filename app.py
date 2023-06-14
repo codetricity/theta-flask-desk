@@ -2,7 +2,7 @@ from flask import Flask
 from flaskwebgui import FlaskUI
 from waitress import serve
 
-dev_mode = False
+dev_mode = True
 app = Flask("__main__")
 # base_url = "https://fake-theta-alpha.vercel.app/osc/"
 base_url = "http://192.168.1.1/osc/"
