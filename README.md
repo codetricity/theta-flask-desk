@@ -32,4 +32,5 @@ pyinstaller -w -F  --add-data "templates:templates" --add-data "static:static" a
 
 ## Windows Tips
 
+* [pyenv-win](https://github.com/pyenv-win/pyenv-win)
 * [pipenv shell and PowerShell configuration](https://github.com/pypa/pipenv/issues/4264#issuecomment-845445399)

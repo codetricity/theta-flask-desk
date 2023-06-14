@@ -10,6 +10,8 @@ base_url = "http://192.168.1.1/osc/"
 from routes.page import *
 from routes.protocol import *
 from routes.command import *
+from routes.option import *
+
 
 def start_flask(**server_kwargs):
     app = server_kwargs.pop("app", None)
