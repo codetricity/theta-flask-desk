@@ -9,7 +9,7 @@
     rel="stylesheet"
     />
 
-    <link
+    <!-- <link
     rel="stylesheet"
     href="{{url_for('static', filename='pannellum.css')}}"
   />    
@@ -22,14 +22,19 @@
         width: 600px;
         height: 400px;
       }
-    </style>
+    </style> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css" />
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='logo.ico')}}" /> 
+
+
   </head>
   <body>
     <div class="p-2">
         <a href='/'> home</a>
-        
+
       <div class="row d-flex justify-content-center pt-3">
         {% block main %} {% endblock main %}
+
         <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}">
 
         </script>

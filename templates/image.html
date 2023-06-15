@@ -1,14 +1,41 @@
 {% extends 'image_base.html' %}
 
 {% block main %}
-    <!-- <img class="img-fluid" src="{{last_file_url}}" alt="last image taken"> -->
+    <img class="img-fluid" src="{{image_url}}" alt="image from camera">
 
-    <div id="panorama"></div>
+    <!-- <div id="panorama"></div>
     <script>
     pannellum.viewer('panorama', {
         "type": "equirectangular",
-        "panorama": "{{last_file_url}}",
+        // "panorama": "{{last_file_url}}",
+        "panorama": "http://192.168.1.1/files/104RICOH/R0100270.JPG",
         "preview": "{{last_file_url}}"
     });
-    </script>
+    </script> -->
+<!-- the viewer container must have a defined size -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+<div id="viewer" style="width: 100vw; height: 100vh;"></div>
+
+<script>
+    const viewer = new PhotoSphereViewer.Viewer({
+        container: document.querySelector('#viewer'),
+        panorama: 'https://pannellum.org/images/alma.jpg',
+    });
+</script>     -->
+
+<!-- VR View from Google -->
+<!-- <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+<div id='vrview'></div>
+<script>
+window.addEventListener('load', onVrViewLoad);
+
+function onVrViewLoad() {
+  // Selector '#vrview' finds element with id 'vrview'.
+  var vrView = new VRView.Player('#vrview', {
+    image: 'http://192.168.1.1/files/104RICOH/R0100270.JPG',
+    is_stereo: false
+  });
+}
+</script> -->
 {% endblock %}
