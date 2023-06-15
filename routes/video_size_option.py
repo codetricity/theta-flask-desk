@@ -64,6 +64,19 @@ def set_57k_5():
     response = requests.post(base_url + 'commands/execute', json=payload)
     return render_template('video_size.html', response = response.text, title='options setting to 5.7K 5fps')
 
+@app.route('/set57k10')
+def set_57k_10():
+    payload = {"name": "camera.setOptions",
+               "parameters": {
+                   "options": {
+                       "fileFormat": {"type": "mp4","width": 5760,"height": 2880, "_codec": "H.264/MPEG-4 AVC", "_frameRate": 10}
+
+                   }
+               }}
+    # response = create_response(payload)
+    response = requests.post(base_url + 'commands/execute', json=payload)
+    return render_template('video_size.html', response = response.text, title='options setting to 5.7K 10fps')
+
 @app.route('/set57k30')
 def set_57k_30():
     payload = {"name": "camera.setOptions",
@@ -76,3 +89,29 @@ def set_57k_30():
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
     return render_template('video_size.html', response = response.text, title='options setting to 5.7K 30fps')
+
+@app.route('/set4k30')
+def set_4k_30():
+    payload = {"name": "camera.setOptions",
+               "parameters": {
+                   "options": {
+                       "fileFormat": {"type": "mp4","width": 3840,"height": 1920, "_codec": "H.264/MPEG-4 AVC", "_frameRate": 30}
+
+                   }
+               }}
+    # response = create_response(payload)
+    response = requests.post(base_url + 'commands/execute', json=payload)
+    return render_template('video_size.html', response = response.text, title='options setting to 4K 30fps')
+
+@app.route('/set4k60')
+def set_4k_60():
+    payload = {"name": "camera.setOptions",
+               "parameters": {
+                   "options": {
+                       "fileFormat": {"type": "mp4","width": 3840,"height": 1920, "_codec": "H.264/MPEG-4 AVC", "_frameRate": 60}
+
+                   }
+               }}
+    # response = create_response(payload)
+    response = requests.post(base_url + 'commands/execute', json=payload)
+    return render_template('video_size.html', response = response.text, title='options setting to 4K 60fps')
