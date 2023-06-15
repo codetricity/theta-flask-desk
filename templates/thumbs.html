@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% block main %}
-<a href="/">home</a>
+<a href="{{url_for('front')}}">home</a>
 <div class="row">
   {% for entry in entries %}
   <div class="card" style="width: 15rem">
@@ -12,6 +12,6 @@
   </div>
   {% endfor %}
 </div>
-<a href='/'> home</a>
+<a href="{{url_for('front')}}">home</a>
 
 {% endblock main %}

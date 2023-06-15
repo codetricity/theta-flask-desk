@@ -30,7 +30,7 @@
 
   <body>
 
-    <main id="content" role="main" class="bg-light">
+    <main id="content" role="main" class="bg-light" style="background-image: url(/static/svg/components/wave-pattern-light.svg);">
       <!-- Breadcrumb -->
       <div class="navbar-dark bg-dark">
         <div class="container content-space-1 content-space-b-lg-2">
@@ -104,29 +104,34 @@
                     <li class="nav-item">
                       <a
                         class="nav-link active"
-                        href="../account-overview.html"
+                        href="{{url_for('info')}}"
                       >
                         <i class="bi-person-badge nav-icon"></i> Info
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../account-security.html">
+                      <a class="nav-link" href="{{url_for('state')}}">
                         <i class="bi-shield-shaded nav-icon"></i> State
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../account-notifications.html">
+                      <a class="nav-link" href="{{url_for('take_picture')}}">
                         <i class="bi-bell nav-icon"></i> Shutter
                         <span
                           class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
-                          >1</span
+                          >image</span
                         >
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../account-preferences.html">
-                        <i class="bi-sliders nav-icon"></i> Mode
+                      <a class="nav-link" href="{{url_for('set_image')}}">
+                        <i class="bi-sliders nav-icon"></i> Image Mode
                       </a>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('set_video')}}">
+                          <i class="bi-sliders nav-icon"></i> Video Mode
+                        </a>
+                      </li>                      
                     </li>
                   </ul>
                   <!-- End List -->
@@ -136,19 +141,27 @@
                   <!-- List -->
                   <ul class="nav nav-sm nav-tabs nav-vertical mb-4">
                     <li class="nav-item">
-                      <a class="nav-link" href="../account-orders.html">
+                      <a class="nav-link" href="{{url_for('last_image')}}">
                         <i class="bi-basket nav-icon"></i> Last image
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../account-wishlist.html">
+                      <a class="nav-link" href="{{url_for('ten_images')}}">
                         <i class="bi-heart nav-icon"></i> 10 images
                         <span
                           class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
-                          >2</span
+                          >10</span
                         >
                       </a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="{{url_for('thirty_images')}}">
+                        <i class="bi-heart nav-icon"></i> 30 images
+                        <span
+                          class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                          >30</span>
+                      </a>
+                    </li>                    
                   </ul>
                   <!-- End List -->
 
@@ -157,24 +170,53 @@
                   <!-- List -->
                   <ul class="nav nav-sm nav-tabs nav-vertical">
                     <li class="nav-item">
-                      <a class="nav-link" href="../account-payments.html">
-                        <i class="bi-credit-card nav-icon"></i> Power
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../account-address.html">
-                        <i class="bi-geo-alt nav-icon"></i> Video
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="../account-teams.html">
-                        <i class="bi-people nav-icon"></i> Image
+                      <a class="nav-link" href="/set8k10">
+                        <i class="bi-credit-card nav-icon"></i> 8K 10fps 
                         <span
-                          class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
-                          >+2 screens</span
-                        >
+                        class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                        >video</span>                        
                       </a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/set8k5">
+                        <i class="bi-credit-card nav-icon"></i> 8K 5fps 
+                        <span
+                        class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                        >video</span>                        
+                      </a>
+                    </li>                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="/set8k2">
+                        <i class="bi-credit-card nav-icon"></i> 8K 2fps 
+                        <span
+                        class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                        >video</span>                        
+                      </a>
+                    </li>  
+                    <li class="nav-item">
+                      <a class="nav-link" href="/set57k30">
+                        <i class="bi-credit-card nav-icon"></i> 5.7K 30fps 
+                        <span
+                        class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                        >video</span>                        
+                      </a>
+                    </li> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="/set57k5">
+                        <i class="bi-credit-card nav-icon"></i> 5.7K 5fps 
+                        <span
+                        class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                        >video</span>                        
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/set57k2">
+                        <i class="bi-credit-card nav-icon"></i> 5.7K 2fps 
+                        <span
+                        class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                        >video</span>                        
+                      </a>
+                    </li>                                                                            
                   </ul>
                   <!-- End List -->
 
@@ -183,11 +225,11 @@
 
                     <!-- List -->
                     <ul class="nav nav-sm nav-tabs nav-vertical">
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                         <a class="nav-link" href="#">
                           <i class="bi-box-arrow-right nav-icon"></i> Log out
                         </a>
-                      </li>
+                      </li> -->
                     </ul>
                     <!-- End List -->
                   </div>
@@ -205,13 +247,20 @@
             <!-- Card -->
             <div class="card">
               <div class="card-header border-bottom">
-                <h4 class="card-header-title">Response</h4>
+                <!-- <span class="text-cap">{{title}}</span> -->
+                <p>{{title}}</p>
+
               </div>
               <!-- body of page -->
               <div class="card-body">
+                {% if image_url %}
+                <img class="img-fluid" src="{{image_url}}" alt="image from camera">
+
+                {% elif response %}
                 <code>
-                  {"api":["/osc/info","/osc/state","/osc/checkForUpdates","/osc/commands/execute","/osc/commands/status"],"apiLevel":[2],"_bluetoothMacAddress":"00:45:de:78:3e:33","endpoints":{"httpPort":80,"httpUpdatesPort":80},"firmwareVersion":"1.41.0","gps":false,"gyro":false,"manufacturer":"Ricoh Company, Ltd.","model":"RICOH THETA X","serialNumber":"10100001","supportUrl":"https://theta360.com/en/support/","uptime":67,"_wlanMacAddress":"00:45:78:bc:45:67"}
+                  {{response}}
                 </code>
+                {% endif %}
               </div>
             </div>
           </div>

@@ -15,14 +15,14 @@ def create_response(protocol, name):
 def info():
     try:
         response = requests.get(base_url + 'info')
-        return render_template('response.html', response = response.text, title='camera info')
+        return render_template('f_response.html', response = response.text, title='camera info')
     except:
-        return render_template('response.html', response = 'error.  please true again')
+        return render_template('f_response.html', response = 'error.  please true again')
 
 @app.route('/state')
 def state():
     try: 
         response = requests.post(base_url + 'state')
-        return render_template('response.html', response = response.text, title='camera state')
+        return render_template('f_response.html', response = response.text, title='camera state')
     except:
-        return render_template('response.html', response = 'error.  please true again')    
+        return render_template('f_response.html', response = 'error.  please true again')    

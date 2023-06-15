@@ -13,7 +13,7 @@ def set_8k_10():
                }}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('response.html', response = response.text, title='options setting to 8K 10fps')
+    return render_template('f_response.html', response = response.text, title='options setting to 8K 10fps')
 
 @app.route('/set8k5')
 def set_8k_5():
@@ -25,7 +25,7 @@ def set_8k_5():
                }}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('response.html', response = response.text, title='options setting to 8K 5fps')
+    return render_template('f_response.html', response = response.text, title='options setting to 8K 5fps')
 
 @app.route('/set8k2')
 def set_8k_2():
@@ -37,7 +37,7 @@ def set_8k_2():
                }}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('response.html', response = response.text, title='options setting to 8K 2fps')
+    return render_template('f_response.html', response = response.text, title='options setting to 8K 2fps')
 
 @app.route('/set57k2')
 def set_57k_2():
@@ -50,7 +50,7 @@ def set_57k_2():
                }}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('response.html', response = response.text, title='options setting to 5.7K 2fps')
+    return render_template('f_response.html', response = response.text, title='options setting to 5.7K 2fps')
 
 @app.route('/set57k5')
 def set_57k_5():
@@ -63,7 +63,7 @@ def set_57k_5():
                }}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('response.html', response = response.text, title='options setting to 5.7K 5fps')
+    return render_template('f_response.html', response = response.text, title='options setting to 5.7K 5fps')
 
 @app.route('/set57k30')
 def set_57k_30():
@@ -76,7 +76,7 @@ def set_57k_30():
                }}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('response.html', response = response.text, title='options setting to 5.7K 30fps')
+    return render_template('f_response.html', response = response.text, title='options setting to 5.7K 30fps')
 
 @app.route('/set_image')
 def set_image():
@@ -89,7 +89,7 @@ def set_image():
                }}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('response.html', response = response.text, title='options setting to set image')
+    return render_template('f_response.html', response = response.text, title='options setting to set image')
 
 @app.route('/set_video')
 def set_video():
@@ -102,4 +102,4 @@ def set_video():
                }}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('response.html', response = response.text, title='options setting to set video')
+    return render_template('f_response.html', response = response.text, title='options setting to set video')
