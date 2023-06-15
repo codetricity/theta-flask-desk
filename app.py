@@ -34,7 +34,7 @@ if __name__ == "__main__":
         # print('starting on http://localhost:5000')
         # serve(app, host='0.0.0.0', port=5000)
     else:
-        ui = FlaskUI(app=app, server="flask", width=800, height=600).run()
+        ui = FlaskUI(app=app, server="flask", width=1200, height=700).run()
         # try:
         #     print('attempting to run with waitress')
         #     FlaskUI(server=serve(app, port=3000))
