@@ -11,6 +11,8 @@ from routes.page import *
 from routes.protocol import *
 from routes.command import *
 from routes.option import *
+from routes.video_size_option import *
+from routes.image_settings import *
 
 
 def start_flask(**server_kwargs):

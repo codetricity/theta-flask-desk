@@ -3,17 +3,17 @@ import requests, json
 from flask import render_template, request
 from .protocol import state
 
-def create_response(payload):
-    response = requests.post(base_url + 'commands/execute', json=payload)
-    output = json.dumps(response.json(), indent=2)
-    return render_template('response.html', response = output)
+# def create_response(payload):
+#     response = requests.post(base_url + 'commands/execute', json=payload)
+#     output = json.dumps(response.json(), indent=2)
+#     return render_template('response.html', response = output)
 
 @app.route('/take_picture')
 def take_picture():
     payload = {"name": "camera.takePicture"}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('f_response.html', response = response.text, title='taking picture')
+    return render_template('index.html', response = response.text, title='taking picture')
 
 @app.route('/last_image')
 def last_image():
@@ -34,7 +34,7 @@ def last_image():
     data = resp.json()
     last_file_url = data["results"]["entries"][0]["fileUrl"]
     name = data["results"]["entries"][0]["name"]    
-    return render_template('f_base.html', image_url = last_file_url, title= name + ' last image')
+    return render_template('index.html', image_url = last_file_url, title= name + ' last image')
 
 @app.route('/full_image')
 def full_image():

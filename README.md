@@ -1,5 +1,7 @@
 # Python Demonstration for THETA
 
+![screenshot](readme_assets/screenshot.png)
+
 ## for development
 
 ```text

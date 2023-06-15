@@ -6,7 +6,10 @@ from flask import render_template
 def home():
     return render_template('index.html', title='THETA Desk', heading = 'RICOH THETA Tester')
 
-@app.route('/front')
-@app.route('/f_index')
-def front():
-    return render_template('f_base.html')
+@app.route('/video_size')
+def video_size():
+    return render_template('video_size.html', title='video size format')
+
+@app.route('/image_settings')
+def image_settings():
+    return render_template('image_settings.html', title='image settings')
