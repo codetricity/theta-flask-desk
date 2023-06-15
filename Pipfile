@@ -9,6 +9,8 @@ requests = "*"
 flaskwebgui = "*"
 pyinstaller = "*"
 waitress = "*"
+macholib = "*"
+pillow = "*"
 
 [dev-packages]
 

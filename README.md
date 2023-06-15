@@ -1,5 +1,15 @@
 # Python Demonstration for THETA
 
+## for development
+
+```text
+pipenv install
+pipenv shell
+python app.py
+```
+
+in `app.py`, set `dev_mode` to `True`
+
 ## packages
 
 * requests - for http requests to THETA
@@ -9,7 +19,9 @@
 
 * [flaskwebgui](https://github.com/ClimenteA/flaskwebgui/tree/master)
 
-## build
+## build for distribution
+
+in `app.py`, set `dev_mode` to `False`
 
 ### windows
 
@@ -24,6 +36,14 @@ pyinstaller -w -F  --add-data "templates:templates" --add-data "static:static" a
 ```
 
 * no icon support
+
+### mac
+
+```text
+pipenv install macholib
+pipenv install pillow
+pyinstaller -w -F  --add-data "templates:templates" --add-data "static:static" --icon=assets/logo.ico app.py
+```
 
 ## application responsiveness
 
