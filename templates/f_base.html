@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Title -->
+    <title>RICOH THETA Desktop</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='logo.ico')}}" /> 
+
+    <link rel="shortcut icon" href="{{url_for('static', filename='logo.ico')}}" />
+
+    <!-- Font -->
+    <link
+      href="{{url_for('static', filename='css/roboto-font.css')}}"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap-icons/font/bootstrap-icons.css')}}">
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/theme.css')}}" />
+  </head>
+
+  <body>
+
+    <main id="content" role="main" class="bg-light">
+      <!-- Breadcrumb -->
+      <div class="navbar-dark bg-dark">
+        <div class="container content-space-1 content-space-b-lg-2">
+          <div class="row align-items-center">
+
+            <!-- End Col -->
+  
+            <div class="col-auto">
+
+              <!-- Responsive Toggle Button -->
+              <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarNav" aria-controls="sidebarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-default">
+                  <i class="bi-list"></i>
+                </span>
+                <span class="navbar-toggler-toggled">
+                  <i class="bi-x"></i>
+                </span>
+              </button>
+              <!-- End Responsive Toggle Button -->
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+        </div>
+      </div>
+      <!-- End Breadcrumb -->
+
+    <!-- Content Section -->
+    <!-- <div class="container content-space-1"> -->
+      <div class="container content-space-1 content-space-t-lg-0 content-space-b-lg-2 mt-lg-n10">
+
+      <div class="row">
+        <div class="col-lg-3">
+          <!-- Navbar -->
+          <div class="navbar-expand-lg navbar-light">
+            <div
+              id="sidebarNav"
+              class="collapse navbar-collapse navbar-vertical"
+            >
+              <!-- Card -->
+              <div class="card flex-grow-1 mb-5">
+                <div class="card-body">
+                  <!-- Avatar -->
+                  <div class="d-none d-lg-block text-center mb-5">
+                    <div class="avatar avatar-xxl avatar-circle mb-3">
+                      <img
+                        class="avatar-img"
+                        src="{{url_for('static', filename='img/160x160/theta160x160.webp')}}"
+                        alt="Image Description"
+                      />
+                      <img
+                        class="avatar-status avatar-lg-status"
+                        src="{{url_for('static', filename='svg/illustrations/top-vendor.svg')}}"
+                        alt="Image Description"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Verified user"
+                      />
+                    </div>
+
+                    <h4 class="card-title mb-0">RICOH THETA X</h4>
+                    <p class="card-text small">11K 360 Images</p>
+                  </div>
+                  <!-- End Avatar -->
+
+                  <!-- Nav -->
+                  <span class="text-cap">camera</span>
+
+                  <!-- List -->
+                  <ul class="nav nav-sm nav-tabs nav-vertical mb-4">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        href="../account-overview.html"
+                      >
+                        <i class="bi-person-badge nav-icon"></i> Info
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../account-security.html">
+                        <i class="bi-shield-shaded nav-icon"></i> State
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../account-notifications.html">
+                        <i class="bi-bell nav-icon"></i> Shutter
+                        <span
+                          class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                          >1</span
+                        >
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../account-preferences.html">
+                        <i class="bi-sliders nav-icon"></i> Mode
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- End List -->
+
+                  <span class="text-cap">media</span>
+
+                  <!-- List -->
+                  <ul class="nav nav-sm nav-tabs nav-vertical mb-4">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../account-orders.html">
+                        <i class="bi-basket nav-icon"></i> Last image
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../account-wishlist.html">
+                        <i class="bi-heart nav-icon"></i> 10 images
+                        <span
+                          class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                          >2</span
+                        >
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- End List -->
+
+                  <span class="text-cap">Options</span>
+
+                  <!-- List -->
+                  <ul class="nav nav-sm nav-tabs nav-vertical">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../account-payments.html">
+                        <i class="bi-credit-card nav-icon"></i> Power
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../account-address.html">
+                        <i class="bi-geo-alt nav-icon"></i> Video
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../account-teams.html">
+                        <i class="bi-people nav-icon"></i> Image
+                        <span
+                          class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                          >+2 screens</span
+                        >
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- End List -->
+
+                  <div class="d-lg-none">
+                    <div class="dropdown-divider"></div>
+
+                    <!-- List -->
+                    <ul class="nav nav-sm nav-tabs nav-vertical">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <i class="bi-box-arrow-right nav-icon"></i> Log out
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End List -->
+                  </div>
+                  <!-- End Nav -->
+                </div>
+              </div>
+              <!-- End Card -->
+            </div>
+          </div>
+          <!-- End Navbar -->
+        </div>
+        <!-- begin right pane -->
+        <div class="col-lg-9">
+          <div class="d-grid gap-3 gap-lg-5">
+            <!-- Card -->
+            <div class="card">
+              <div class="card-header border-bottom">
+                <h4 class="card-header-title">Response</h4>
+              </div>
+              <!-- body of page -->
+              <div class="card-body">
+                <code>
+                  {"api":["/osc/info","/osc/state","/osc/checkForUpdates","/osc/commands/execute","/osc/commands/status"],"apiLevel":[2],"_bluetoothMacAddress":"00:45:de:78:3e:33","endpoints":{"httpPort":80,"httpUpdatesPort":80},"firmwareVersion":"1.41.0","gps":false,"gyro":false,"manufacturer":"Ricoh Company, Ltd.","model":"RICOH THETA X","serialNumber":"10100001","supportUrl":"https://theta360.com/en/support/","uptime":67,"_wlanMacAddress":"00:45:78:bc:45:67"}
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end right pane -->
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+    </main>
+    <!-- End Content Section -->
+    <!-- JS Global Compulsory -->
+    <script src="{{url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <!-- JS Front -->
+    <script src="{{url_for('static', filename='js/hs.core.js')}}"></script>
+  </body>
+</html>
