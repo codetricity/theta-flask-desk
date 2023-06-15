@@ -90,6 +90,45 @@ def set_57k_30():
     response = requests.post(base_url + 'commands/execute', json=payload)
     return render_template('video_size.html', response = response.text, title='options setting to 5.7K 30fps')
 
+@app.route('/setmax7200')
+def set_max7200():
+    payload = {"name": "camera.setOptions",
+               "parameters": {
+                   "options": {
+                       "_maxRecordableTime": 7200
+
+                   }
+               }}
+    # response = create_response(payload)
+    response = requests.post(base_url + 'commands/execute', json=payload)
+    return render_template('video_size.html', response = response.text, title='options setting max recordable time to 2 hrs')
+
+@app.route('/setmax1500')
+def set_max1500():
+    payload = {"name": "camera.setOptions",
+               "parameters": {
+                   "options": {
+                       "_maxRecordableTime": 1500
+
+                   }
+               }}
+    # response = create_response(payload)
+    response = requests.post(base_url + 'commands/execute', json=payload)
+    return render_template('video_size.html', response = response.text, title='options setting max recordable time to 25 mins')
+
+@app.route('/setmax300')
+def set_max300():
+    payload = {"name": "camera.setOptions",
+               "parameters": {
+                   "options": {
+                       "_maxRecordableTime": 300
+
+                   }
+               }}
+    # response = create_response(payload)
+    response = requests.post(base_url + 'commands/execute', json=payload)
+    return render_template('video_size.html', response = response.text, title='options setting max recordable time to 5 mins')
+
 @app.route('/set4k30')
 def set_4k_30():
     payload = {"name": "camera.setOptions",
