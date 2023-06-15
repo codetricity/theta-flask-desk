@@ -97,6 +97,13 @@ def set_4k_30():
                    "options": {
                        "fileFormat": {"type": "mp4","width": 3840,"height": 1920, "_codec": "H.264/MPEG-4 AVC", "_frameRate": 30}
 
+@app.route('/setmax7200')
+def set_max7200():
+    payload = {"name": "camera.setOptions",
+               "parameters": {
+                   "options": {
+                       "_maxRecordableTime": 7200
+
                    }
                }}
     # response = create_response(payload)
@@ -109,9 +116,30 @@ def set_4k_60():
                "parameters": {
                    "options": {
                        "fileFormat": {"type": "mp4","width": 3840,"height": 1920, "_codec": "H.264/MPEG-4 AVC", "_frameRate": 60}
+    return render_template('video_size.html', response = response.text, title='options setting max recordable time to 2 hrs')
+
+@app.route('/setmax1500')
+def set_max1500():
+    payload = {"name": "camera.setOptions",
+               "parameters": {
+                   "options": {
+                       "_maxRecordableTime": 1500
 
                    }
                }}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('video_size.html', response = response.text, title='options setting to 4K 60fps')
+    return render_template('video_size.html', response = response.text, title='options setting max recordable time to 25 mins')
+
+@app.route('/setmax300')
+def set_max300():
+    payload = {"name": "camera.setOptions",
+               "parameters": {
+                   "options": {
+                       "_maxRecordableTime": 300
+
+                   }
+               }}
+    # response = create_response(payload)
+    response = requests.post(base_url + 'commands/execute', json=payload)
+    return render_template('video_size.html', response = response.text, title='options setting max recordable time to 5 mins')
