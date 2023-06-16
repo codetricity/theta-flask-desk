@@ -2,6 +2,8 @@ from app import app, base_url
 import requests, json
 from flask import render_template, request
 from .protocol import state
+from time import sleep
+
 
 # def create_response(payload):
 #     response = requests.post(base_url + 'commands/execute', json=payload)
@@ -13,6 +15,7 @@ def take_picture():
     payload = {"name": "camera.takePicture"}
     # response = create_response(payload)
     response = requests.post(base_url + 'commands/execute', json=payload)
+    sleep(0.75)
     return render_template('index.html', response = response.text, title='taking picture')
 
 @app.route('/last_image')
