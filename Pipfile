@@ -11,6 +11,7 @@ pyinstaller = "*"
 waitress = "*"
 macholib = "*"
 pillow = "*"
+colorama = "*"
 
 [dev-packages]
 
