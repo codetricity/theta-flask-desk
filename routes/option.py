@@ -3,28 +3,28 @@ import requests, json
 from flask import render_template, request
 
 
-@app.route('/set_image')
+@app.route("/set_image")
 def set_image():
-    payload = {"name": "camera.setOptions",
-               "parameters": {
-                   "options": {
-                       "captureMode": "image"
-
-                   }
-               }}
+    payload = {
+        "name": "camera.setOptions",
+        "parameters": {"options": {"captureMode": "image"}},
+    }
     # response = create_response(payload)
-    response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('index.html', response = response.text, title='options setting to set image')
+    response = requests.post(base_url + "commands/execute", json=payload)
+    return render_template(
+        "index.html", response=response.text, title="options setting to set image", active_nav='set_image'
+    )
 
-@app.route('/set_video')
+
+@app.route("/set_video")
 def set_video():
-    payload = {"name": "camera.setOptions",
-               "parameters": {
-                   "options": {
-                       "captureMode": "video"
-
-                   }
-               }}
+    payload = {
+        "name": "camera.setOptions",
+        "parameters": {"options": {"captureMode": "video"}},
+    }
     # response = create_response(payload)
-    response = requests.post(base_url + 'commands/execute', json=payload)
-    return render_template('index.html', response = response.text, title='options setting to set video')
+    response = requests.post(base_url + "commands/execute", json=payload)
+    return render_template(
+        "index.html", response=response.text, title="options setting to set video",
+        active_nav='set_video'
+    )

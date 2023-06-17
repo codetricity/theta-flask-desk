@@ -32,18 +32,32 @@
 
         <!-- List -->
         <ul class="nav nav-sm nav-tabs nav-vertical mb-4">
+
           <li class="nav-item">
-            <a class="nav-link active" href="{{url_for('info')}}">
+            {% if active_nav == 'info' %}
+              <a class="nav-link active" href="{{url_for('info')}}">
+            {% else %}
+              <a class="nav-link" href="{{url_for('info')}}">
+            {% endif %}
               <i class="bi-info-square-fill nav-icon"></i> Info
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url_for('state')}}">
+            {% if active_nav == 'state' %}
+              <a class="nav-link active"  href="{{url_for('state')}}">
+            {% else %}
+              <a class="nav-link"  href="{{url_for('state')}}">
+            {% endif %}
               <i class="bi-clipboard2-data-fill nav-icon"></i> State
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url_for('take_picture')}}">
+            {% if active_nav == 'take_picture' %}
+              <a class="nav-link active" href="{{url_for('take_picture')}}">
+            {% else %}
+              <a class="nav-link" href="{{url_for('take_picture')}}">
+            {% endif %}
+
               <i class="bi-lightning-fill nav-icon"></i> Shutter
               <span
                 class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
@@ -52,12 +66,20 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url_for('set_image')}}">
+            {% if active_nav == 'set_image' %}
+              <a class="nav-link active" href="{{url_for('set_image')}}">
+            {% else %}
+              <a class="nav-link" href="{{url_for('set_image')}}">
+            {% endif %}
               <i class="bi-camera-fill nav-icon"></i> Image Mode
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url_for('set_video')}}">
+            {% if active_nav == 'set_video' %}
+              <a class="nav-link active" href="{{url_for('set_video')}}">
+            {% else %}
+              <a class="nav-link" href="{{url_for('set_video')}}">
+            {% endif %}
               <i class="bi-camera-video-fill nav-icon"></i> Video Mode
             </a>
           </li>
@@ -69,7 +91,12 @@
         <!-- List -->
         <ul class="nav nav-sm nav-tabs nav-vertical mb-4">
           <li class="nav-item">
+            {% if active_nav == 'last_image' %}
+            <a class="nav-link active" href="{{url_for('last_image')}}">
+            {% else %}
             <a class="nav-link" href="{{url_for('last_image')}}">
+            {% endif %}
+
               <i class="bi-image nav-icon"></i> Last image
             </a>
           </li>
