@@ -48,7 +48,8 @@
           <ul class="nav nav-sm nav-tabs nav-vertical">
 
             <li class="nav-item">
-              <a class="nav-link" href="/setmax7200">
+              <a class="nav-link {% if active_nav=='setmax7200' %}active{% endif %}" 
+                href="/setmax7200">
                 <i class="bi-clock-history nav-icon"></i> 2hrs 
                 <span
                 class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
@@ -56,22 +57,26 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/setmax1500">
+              <a class="nav-link {% if active_nav=='setmax1500' %}active{% endif %}" 
+              href="/setmax1500">
                 <i class="bi-clock-fill nav-icon"></i> 25mins 
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/setmax300">
+              <a class="nav-link {% if active_nav=='setmax300' %}active{% endif %}" 
+              href="/setmax300">
                 <i class="bi-clock-fill nav-icon"></i> 5mins 
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/set8k10">
+              <a class="nav-link {% if active_nav=='set8k10' %}active{% endif %}" 
+              href="/set8k10">
                 <i class="bi-camera-video-fill nav-icon"></i> 8K 10fps 
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/set8k5">
+              <a class="nav-link {% if active_nav=='set8k5' %}active{% endif %}" 
+              href="/set8k5">
                 <i class="bi-camera-video-fill nav-icon"></i> 8K 5fps                    
                 <span
                 class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
@@ -79,17 +84,20 @@
               </a>     
             </li>                    
             <li class="nav-item">
-              <a class="nav-link" href="/set8k2">
+              <a class="nav-link {% if active_nav=='set8k2' %}active{% endif %}" 
+              href="/set8k2">
                 <i class="bi-camera-video-fill nav-icon"></i> 8K 2fps                        
               </a>
             </li>  
             <li class="nav-item">
-              <a class="nav-link" href="/set57k30">
+              <a class="nav-link {% if active_nav=='set57k30' %}active{% endif %}" 
+              href="/set57k30">
                 <i class="bi-camera-video-fill nav-icon"></i> 5.7K 30fps                      
               </a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="/set57k10">
+              <a class="nav-link {% if active_nav=='set57k10' %}active{% endif %}" 
+              href="/set57k10">
                 <i class="bi-camera-video-fill nav-icon"></i> 5.7K 10fps 
                 <span
                 class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
@@ -97,7 +105,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/set57k5">
+              <a class="nav-link {% if active_nav=='set57k5' %}active{% endif %}" 
+              href="/set57k5">
                 <i class="bi-camera-video-fill nav-icon"></i> 5.7K 5fps 
                 <span
                 class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
@@ -105,7 +114,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/set57k2">
+              <a class="nav-link {% if active_nav=='set57k2' %}active{% endif %}" 
+              href="/set57k2">
                 <i class="bi-camera-video-fill nav-icon"></i> 5.7K 2fps 
                 <span
                 class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
@@ -113,14 +123,17 @@
               </a>
             </li>   
             <li class="nav-item">
-              <a class="nav-link" href="/set4k60">
+              <a class="nav-link {% if active_nav=='set4k60' %}active{% endif %}" 
+              href="/set4k60">
                 <i class="bi-camera-video-fill nav-icon"></i> 4K 60fps 
                 <!-- <span
                 class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
                 >video</span>                         -->
               </a>
-            </li>                <li class="nav-item">
-              <a class="nav-link" href="/set4k30">
+            </li>                
+            <li class="nav-item">
+              <a class="nav-link {% if active_nav=='set4k30' %}active{% endif %}" 
+              href="/set4k30">
                 <i class="bi-camera-video-fill nav-icon"></i> 4K 30fps 
                 <!-- <span
                 class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
@@ -130,20 +143,6 @@
                                                                         
           </ul>
           <!-- End List -->
-
-          <div class="d-lg-none">
-            <div class="dropdown-divider"></div>
-
-            <!-- List -->
-            <ul class="nav nav-sm nav-tabs nav-vertical">
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi-box-arrow-right nav-icon"></i> Log out
-                </a>
-              </li> -->
-            </ul>
-            <!-- End List -->
-          </div>
           <!-- End Nav -->
         </div>
       </div>
