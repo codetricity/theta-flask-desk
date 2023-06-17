@@ -23,7 +23,7 @@ def video_size():
     }
     response = requests.post(base_url + "commands/execute", json=payload)
     sleep(0.75)
-    return render_template("video_size.html", title="video size format")
+    return render_template("video_size.html", title="video size format", active_nav="none")
 
 
 @app.route("/image_settings")
