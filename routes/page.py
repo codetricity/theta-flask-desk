@@ -34,4 +34,4 @@ def image_settings():
     }
     response = requests.post(base_url + "commands/execute", json=payload)
     sleep(0.75)
-    return render_template("image_settings.html", title="image settings")
+    return render_template("image_settings.html", title="image settings", active_nav="none")
