@@ -42,6 +42,35 @@
           <!-- List -->
           <ul class="nav nav-sm nav-tabs nav-vertical">
             <li class="nav-item">
+              <a class="nav-link  {% if active_nav == 'set55' %}active{% endif %}" 
+              href="/set55">
+                <i class="bi-file-earmark-image nav-icon"></i>Set to 5.5K resolution
+                <!-- <span
+                class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                >3</span>                         -->
+              </a>
+            </li>   
+            <li class="nav-item">
+              <a class="nav-link  {% if active_nav == 'set11' %}active{% endif %}" 
+              href="/set11">
+                <i class="bi-file-earmark-image nav-icon"></i>Set to 11K resolution
+                <!-- <span
+                class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                >3</span>                         -->
+              </a>
+            </li> 
+
+            <!-- <li class="nav-item">
+              <a class="nav-link  {% if active_nav == 'nodelay' %}active{% endif %}" 
+              href="/nodelay">
+                <i class="bi-clock-history nav-icon"></i>No delay
+                <span
+                class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+                >3</span> 
+              </a>
+            </li>    -->
+
+            <li class="nav-item">
               <a class="nav-link  {% if active_nav == 'delay3' %}active{% endif %}" 
               href="/delay3">
                 <i class="bi-clock-history nav-icon"></i>Self timer 3 secs
@@ -57,7 +86,63 @@
               class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
               >5</span>                         -->
             </a>
-          </li>                                                                                      
+          </li>      
+          <li class="nav-item">
+            <a class="nav-link {% if active_nav == 'delay10'%}active{% endif %}" href="/delay10">
+              <i class="bi-clock-history nav-icon"></i>Self timer 10 secs
+              <!-- <span
+              class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+              >5</span>                         -->
+            </a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link {% if active_nav == 'evneg20'%}active{% endif %}" href="/evneg20">
+              <i class="bi-sliders2-vertical nav-icon"></i>EV -2.0
+              <span
+              class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+              >Set to Auto first</span>                        
+            </a>
+          </li>                                                                                     
+          <li class="nav-item">
+            <a class="nav-link {% if active_nav == 'ev0'%}active{% endif %}" href="/ev0">
+              <i class="bi-sliders2-vertical nav-icon"></i>EV 0.0
+              <span
+              class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+              >Set to Auto first</span>                        
+            </a>
+          </li>                                                                                     
+          <li class="nav-item">
+            <a class="nav-link {% if active_nav == 'ev20'%}active{% endif %}" href="/ev20">
+              <i class="bi-sliders2-vertical nav-icon"></i>EV 2.0
+              <span
+              class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+              >Set to Auto first</span>                        
+            </a>
+          </li>                                                                                     
+          <li class="nav-item">
+            <a class="nav-link {% if active_nav == 'vol0'%}active{% endif %}" href="/vol0">
+              <i class="bi-volume-mute-fill nav-icon"></i>Set Shutter volume to 0
+              <!-- <span
+              class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+              >5</span>                         -->
+            </a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link {% if active_nav == 'vol40'%}active{% endif %}" href="/vol40">
+              <i class="bi-volume-down-fill nav-icon"></i>Set Shutter volume to 40
+              <!-- <span
+              class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+              >5</span>                         -->
+            </a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link {% if active_nav == 'vol100'%}active{% endif %}" href="/vol100">
+              <i class="bi-volume-up-fill nav-icon"></i>Set Shutter volume to 100
+              <!-- <span
+              class="badge bg-soft-dark text-dark rounded-pill nav-link-badge"
+              >5</span>                         -->
+            </a>
+          </li>  
           </ul>
           <!-- End List -->
 
