@@ -16,10 +16,7 @@ in `app.py`, set `dev_mode` to `True`
 
 * requests - for http requests to THETA
 * flask - backend web framework
-
-## for desktop
-
-* [flaskwebgui](https://github.com/ClimenteA/flaskwebgui/tree/master)
+* [flaskwebgui](https://github.com/ClimenteA/flaskwebgui/tree/master) - for desktop
 
 ## build for distribution
 
@@ -42,8 +39,11 @@ pyinstaller -w -F  --add-data "templates:templates" --add-data "static:static" a
 ### mac
 
 ```text
-pipenv install macholib
+# one time only
+pipenv shell
+pipenv install macholib 
 pipenv install pillow
+# every build
 pyinstaller -w -F  --add-data "templates:templates" --add-data "static:static" --icon=assets/logo.ico app.py
 ```
 
