@@ -2,7 +2,7 @@ from flask import Flask
 from flaskwebgui import FlaskUI
 from waitress import serve
 
-dev_mode = True
+dev_mode = False
 app = Flask("__main__")
 # base_url = "https://fake-theta-alpha.vercel.app/osc/"
 base_url = "http://192.168.1.1/osc/"
@@ -15,24 +15,12 @@ from routes.video_size_option import *
 from routes.image_settings import *
 
 
-def start_flask(**server_kwargs):
-    app = server_kwargs.pop("app", None)
-    server_kwargs.pop("debug", None)
-
-    try:
-        print('serving on waitress')
-        serve(app, **server_kwargs)
-    except:
-        print('running on waitress failed')
-        app.run(**server_kwargs)
-
-
 
 if __name__ == "__main__":
     if dev_mode:
-        app.run(debug=True)
-        # print('starting on http://localhost:5000')
-        # serve(app, host='0.0.0.0', port=5000)
+        # app.run(debug=True)
+        print('starting on http://localhost:5000')
+        serve(app, host='0.0.0.0', port=5000, threads=8)
     else:
         ui = FlaskUI(app=app, server="flask", width=1200, height=700).run()
         # try:
